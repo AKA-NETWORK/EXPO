@@ -1,0 +1,15 @@
+name: Expo CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+    - run: npm ci
+    - run: npx expo install
+    - run: npx expo run:android --variant=release
