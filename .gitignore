@@ -1,0 +1,5 @@
+# Expo
+.expo/
+node_modules/
+dist/
+*.expo.*
